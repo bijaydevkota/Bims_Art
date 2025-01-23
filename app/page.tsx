@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 
-
 export default function Home() {
   return (
     <div className="bg-gray-900 text-white font-sans">
@@ -23,7 +22,7 @@ export default function Home() {
               </li>
               <li>
                 <a href="#gallery" className="hover:text-teal-400">
-                  Gallery
+                  Arts
                 </a>
               </li>
               <li>
@@ -59,7 +58,7 @@ export default function Home() {
             objectFit="cover"
             quality={100}
             priority
-            className="z-0 opacity-80"
+            className="z-0"
           />
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>{" "}
         </div>
@@ -72,12 +71,20 @@ export default function Home() {
           <p className="text-xl md:text-2xl text-gray-300">
             Explore my collection of creative works
           </p>
+          <div className="flex gap-4 justify-center">
           <a
             href="#gallery"
             className="mt-6 inline-block bg-teal-500 text-white py-2 px-6 rounded-full hover:bg-teal-600 transition"
           >
-            View Gallery
+            View Recent Arts
           </a>
+          <a
+            href="https://www.instagram.com/bimsarts_/" target="_blank"
+            className="mt-6 inline-block bg-transparent border text-white py-2 px-6 rounded-full hover:bg-gray-50 hover:text-black transition"
+          >
+            Get Yours Now
+          </a>
+          </div>
         </div>
       </section>
 
@@ -98,30 +105,45 @@ export default function Home() {
       <section id="gallery" className="py-16 bg-gray-900 mt-8">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-6 text-teal-400">
-            Gallery
+            My Recent Arts
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-16">
             {/* Add your own images here */}
             {[
-              "/art1.jpg",
-              "/art2.jpg",
-              "/art3.jpg",
-              "/art4.jpg",
-              "/art1.jpg",
-              "/art2.jpg",
-              "/art3.jpg",
-              "/art4.jpg",
-              
-            ].map((imagePath, index) => (
+              { path: "/art1.jpg", customized: true },
+              { path: "/art2.jpg", forSale: true },
+              { path: "/art3.jpg", soldOut: true },
+              { path: "/art4.jpg", forSale: true },
+              { path: "/art4.jpg", forSale: true },
+              { path: "/art3.jpg", soldOut: true },
+              { path: "/art2.jpg", forSale: true },
+              { path: "/art1.jpg", customized: true },
+            ].map((image, index) => (
               <div
                 key={index}
                 className="relative group overflow-hidden rounded-lg shadow-lg"
               >
                 <img
-                  src={imagePath}
+                  src={image.path}
                   alt={`Art ${index + 1}`}
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
                 />
+                {/* "For Sale" badge */}
+                {image.forSale && (
+                  <div className="absolute top-2 right-2 bg-red-600 text-white text-sm font-semibold px-2 py-1 rounded shadow">
+                    For Sale
+                  </div>
+                )}
+                {image.soldOut && (
+                  <div className="absolute top-2 right-2 bg-gray-800 text-white text-sm font-semibold px-2 py-1 rounded shadow">
+                    Sold Out
+                  </div>
+                )}
+                {image.customized && (
+                  <div className="absolute top-2 right-2 bg-teal-400 text-gray-600 text-sm font-semibold px-2 py-1 rounded shadow">
+                    Customized
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -132,7 +154,9 @@ export default function Home() {
         <div className="container mx-auto px-6">
           {/* Section Title */}
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-teal-400">Customer Satisfaction</h2>
+            <h2 className="text-4xl font-bold text-teal-400">
+              Customer Satisfaction
+            </h2>
             <p className="text-gray-400 mt-4">
               Hear what my customers have to say about working with me!
             </p>
@@ -143,17 +167,19 @@ export default function Home() {
             {/* Testimonial Card 1 */}
             <div className="bg-gray-700 p-6 rounded-lg shadow-lg">
               <p className="text-gray-300 italic mb-4">
-              &quot;BimsArt turned my ideas into reality! Their work is
+                &quot;BimsArt turned my ideas into reality! Their work is
                 exceptional.&quot;
               </p>
-              <h4 className="text-lg font-semibold text-teal-400">Bijay Devkota</h4>
+              <h4 className="text-lg font-semibold text-teal-400">
+                Bijay Devkota
+              </h4>
               <p className="text-gray-500 text-sm">Art Enthusiast</p>
             </div>
 
             {/* Testimonial Card 2 */}
             <div className="bg-gray-700 p-6 rounded-lg shadow-lg">
               <p className="text-gray-300 italic mb-4">
-              &quot;I couldn&apos;t be happier with my custom artwork. Highly
+                &quot;I couldn&apos;t be happier with my custom artwork. Highly
                 recommend!&quot;
               </p>
               <h4 className="text-lg font-semibold text-teal-400">
@@ -165,7 +191,8 @@ export default function Home() {
             {/* Testimonial Card 3 */}
             <div className="bg-gray-700 p-6 rounded-lg shadow-lg">
               <p className="text-gray-300 italic mb-4">
-              &quot;Incredible attention to detail. BimsArt is amazing! Thank You BimsArt&quot;
+                &quot;Incredible attention to detail. BimsArt is amazing! Thank
+                You BimsArt&quot;
               </p>
               <h4 className="text-lg font-semibold text-teal-400">
                 Agreema Khanal
@@ -243,7 +270,6 @@ export default function Home() {
                   <path d="M7.75 2h8.5C19.544 2 22 4.456 22 7.75v8.5C22 19.544 19.544 22 16.25 22h-8.5C4.456 22 2 19.544 2 16.25v-8.5C2 4.456 4.456 2 7.75 2zm8.5 2h-8.5c-2.008 0-3.75 1.742-3.75 3.75v8.5c0 2.008 1.742 3.75 3.75 3.75h8.5c2.008 0 3.75-1.742 3.75-3.75v-8.5c0-2.008-1.742-3.75-3.75-3.75zm-4.25 4c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zm6.5.875a.875.875 0 1 1-1.75 0 .875.875 0 0 1 1.75 0zM12 9.25a2.75 2.75 0 1 0 0 5.5 2.75 2.75 0 0 0 0-5.5z" />
                 </svg>
               </a>
-              
             </div>
           </div>
           <div className="mt-6 text-gray-500 text-sm">
