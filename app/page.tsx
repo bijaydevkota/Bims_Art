@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import { Menu } from "lucide-react"
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,66 +14,89 @@ export default function Home() {
         {/* Logo */}
         <h1 className="text-3xl font-bold text-teal-500">BimsArt</h1>
 
-        {/* Hamburger Menu Button */}
-        <button
-          className="md:hidden text-white focus:outline-none"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            className="w-6 h-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </button>
-
-        {/* Navigation Menu */}
-        <nav
-          className={`absolute md:static top-full left-0 w-full md:w-auto bg-gray-800 md:bg-transparent transition-transform transform ${
-            menuOpen ? "translate-y-0" : "-translate-y-full"
-          } md:translate-y-0`}
-        >
-          <ul className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 p-6 md:p-0">
+        {/* Desktop Navigation */}
+        <nav className="hidden md:block">
+          <ul className="flex space-x-6">
             <li>
-              <a href="#home" className="hover:text-teal-400">
+              <a href="#home" className="text-white hover:text-teal-400 transition duration-300">
                 Home
               </a>
             </li>
             <li>
-              <a href="#about" className="hover:text-teal-400">
+              <a href="#about" className="text-white hover:text-teal-400 transition duration-300">
                 About
               </a>
             </li>
             <li>
-              <a href="#gallery" className="hover:text-teal-400">
+              <a href="#gallery" className="text-white hover:text-teal-400 transition duration-300">
                 Arts
               </a>
             </li>
             <li>
-              <a href="#contact" className="hover:text-teal-400">
+              <a href="#contact" className="text-white hover:text-teal-400 transition duration-300">
                 Contact
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.instagram.com/bimsarts_/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition"
-              >
-                Order Now
               </a>
             </li>
           </ul>
         </nav>
+
+        {/* Desktop Order Now Button */}
+        <a
+          href="https://www.instagram.com/bimsarts_/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden md:inline-block bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition"
+        >
+          Order Now
+        </a>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden text-white focus:outline-none"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          <Menu className="w-6 h-6" />
+        </button>
+
+
+        {/* Mobile Navigation */}
+        {menuOpen && (
+          <nav className="absolute top-full left-0 w-full bg-gray-800 md:hidden">
+            <ul className="flex flex-col space-y-4 p-6">
+              <li>
+                <a href="#home" className="text-white hover:text-teal-400 transition duration-300">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#about" className="text-white hover:text-teal-400 transition duration-300">
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="#gallery" className="text-white hover:text-teal-400 transition duration-300">
+                  Arts
+                </a>
+              </li>
+              <li>
+                <a href="#contact" className="text-white hover:text-teal-400 transition duration-300">
+                  Contact
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/bimsarts_/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition inline-block"
+                >
+                  Order Now
+                </a>
+              </li>
+            </ul>
+          </nav>
+        )}
       </div>
     </header>
 
@@ -218,7 +242,7 @@ export default function Home() {
               <h4 className="text-lg font-semibold text-teal-400">
                 Bishal Paudel
               </h4>
-              <p className="text-gray-500 text-sm">Gallery Owner</p>
+              <p className="text-gray-500 text-sm">Graphic Designer</p>
             </div>
 
             {/* Testimonial Card 3 */}
@@ -230,7 +254,7 @@ export default function Home() {
               <h4 className="text-lg font-semibold text-teal-400">
                 Agreema Khanal
               </h4>
-              <p className="text-gray-500 text-sm">Photographer</p>
+              <p className="text-gray-500 text-sm">Bsc.Ag Student</p>
             </div>
           </div>
         </div>
