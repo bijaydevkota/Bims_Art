@@ -8,7 +8,7 @@ export default function Home() {
       <header className="bg-gray-800 shadow-md sticky top-0 z-50">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
           <h1 className="text-3xl font-bold text-teal-500">BimsArt</h1>
-          <nav>
+          <nav className="hidden md:block">
             <ul className="flex space-x-6">
               <li>
                 <a href="#home" className="hover:text-teal-400">
@@ -35,12 +35,24 @@ export default function Home() {
                   href="https://www.instagram.com/bimsarts_/"
                   target="_blank"
                   className="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition"
+                  rel="noreferrer"
                 >
                   Order Now
                 </a>
               </li>
             </ul>
           </nav>
+          <button className="md:hidden text-white">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
         </div>
       </header>
 
@@ -79,7 +91,7 @@ export default function Home() {
             View Recent Arts
           </a>
           <a
-            href="https://www.instagram.com/bimsarts_/" target="_blank"
+            href="https://www.instagram.com/bimsarts_/" target="_"
             className="mt-6 inline-block bg-transparent border text-white py-2 px-6 rounded-full hover:bg-gray-50 hover:text-black transition"
           >
             Get Yours Now
@@ -117,7 +129,7 @@ export default function Home() {
               { path: "/art4.jpg", forSale: true },
               { path: "/art3.jpg", soldOut: true },
               { path: "/art2.jpg", forSale: true },
-              { path: "/art1.jpg", customized: true },
+              { path: "/art3.jpg", soldOut: true },
             ].map((image, index) => (
               <div
                 key={index}
