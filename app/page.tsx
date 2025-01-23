@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+
 
 export default function Home() {
   return (
@@ -143,8 +143,8 @@ export default function Home() {
             {/* Testimonial Card 1 */}
             <div className="bg-gray-700 p-6 rounded-lg shadow-lg">
               <p className="text-gray-300 italic mb-4">
-                "BimsArt turned my ideas into reality! Their work is
-                exceptional."
+              &quot;BimsArt turned my ideas into reality! Their work is
+                exceptional.&quot;
               </p>
               <h4 className="text-lg font-semibold text-teal-400">Bijay Devkota</h4>
               <p className="text-gray-500 text-sm">Art Enthusiast</p>
@@ -153,8 +153,8 @@ export default function Home() {
             {/* Testimonial Card 2 */}
             <div className="bg-gray-700 p-6 rounded-lg shadow-lg">
               <p className="text-gray-300 italic mb-4">
-                "I couldn't be happier with my custom artwork. Highly
-                recommend!"
+              &quot;I couldn&apos;t be happier with my custom artwork. Highly
+                recommend!&quot;
               </p>
               <h4 className="text-lg font-semibold text-teal-400">
                 Bishal Paudel
@@ -165,7 +165,7 @@ export default function Home() {
             {/* Testimonial Card 3 */}
             <div className="bg-gray-700 p-6 rounded-lg shadow-lg">
               <p className="text-gray-300 italic mb-4">
-                "Incredible attention to detail. BimsArt is amazing! Thank You BimsArt"
+              &quot;Incredible attention to detail. BimsArt is amazing! Thank You BimsArt&quot;
               </p>
               <h4 className="text-lg font-semibold text-teal-400">
                 Agreema Khanal
