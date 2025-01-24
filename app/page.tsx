@@ -170,7 +170,7 @@ export default function Home() {
                 key={index}
                 className="relative group overflow-hidden rounded-lg shadow-lg"
               >
-                <img
+                <Image
                   src={image.path}
                   alt={`Art ${index + 1}`}
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
