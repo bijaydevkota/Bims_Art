@@ -174,6 +174,8 @@ export default function Home() {
                   src={image.path}
                   alt={`Art ${index + 1}`}
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                  width={500}
+                  height={500}
                 />
                 {/* "For Sale" badge */}
                 {image.forSale && (
