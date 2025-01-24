@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { Menu, X } from "lucide-react"
+import { DragCards } from "@/components/ourworks";
 
 
 export default function Home() {
@@ -26,13 +27,18 @@ export default function Home() {
               </a>
             </li>
             <li>
+              <a href="#gallery" className="text-white hover:text-teal-400 transition duration-300">
+                Gallery
+              </a>
+            </li>
+            <li>
               <a href="#about" className="text-white hover:text-teal-400 transition duration-300">
                 About
               </a>
             </li>
             <li>
-              <a href="#gallery" className="text-white hover:text-teal-400 transition duration-300">
-                Gallery
+              <a href="#works" className="text-white hover:text-teal-400 transition duration-300">
+                Works
               </a>
             </li>
             <li>
@@ -141,19 +147,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="py-16 bg-gray-800">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-6 text-teal-400">About Me</h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
-            I am a passionate artist who loves to bring ideas to life through
-            vibrant and unique creations. My work reflects a deep connection to
-            nature, emotions, and the beauty of everyday life. Welcome to my
-            artistic journey.
-          </p>
-        </div>
-      </section>
-
+    
       {/* Gallery Section */}
       <section id="gallery" className="py-16 bg-gray-900 mt-8">
         <div className="container mx-auto px-6">
@@ -203,6 +197,22 @@ export default function Home() {
         </div>
       </section>
 
+ {/* About Section */}
+      <section id="about" className="py-16 bg-gray-800 mt-16">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold mb-6 text-teal-400">About Me</h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            I am a passionate artist who loves to bring ideas to life through
+            vibrant and unique creations. My work reflects a deep connection to
+            nature, emotions, and the beauty of everyday life. Welcome to my
+            artistic journey.
+          </p>
+        </div>
+      </section>
+
+      {/* our-Works */}
+      <DragCards/>
+
       <section id="testimonials" className="py-16 bg-gray-800 text-white">
         <div className="container mx-auto px-6">
           {/* Section Title */}
@@ -226,7 +236,7 @@ export default function Home() {
               <h4 className="text-lg font-semibold text-teal-400">
                 Bijay Devkota
               </h4>
-              <p className="text-gray-500 text-sm">Art Enthusiast</p>
+              <p className="text-gray-500 text-sm">Software Developer</p>
             </div>
 
             {/* Testimonial Card 2 */}
@@ -286,7 +296,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 py-8">
+      <footer className="bg-gray-900 py-8 mt-8">
         <div className="container mx-auto px-6 text-center">
           <h3 className="text-2xl font-bold  mb-4 text-teal-400">
             Connect with Me
