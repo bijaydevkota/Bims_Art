@@ -81,6 +81,7 @@ export default function Home() {
                 <a href="#gallery" className="text-white hover:text-teal-400 transition duration-300">
                   Gallery
                 </a>
+                </li>
               <li>
                 <a href="#about" className="text-white hover:text-teal-400 transition duration-300">
                   About
@@ -91,7 +92,6 @@ export default function Home() {
                   Works
                 </a>
               </li> 
-              </li>
               <li>
                 <a href="#contact" className="text-white hover:text-teal-400 transition duration-300">
                   Contact
