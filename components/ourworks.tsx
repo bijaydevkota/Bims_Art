@@ -38,7 +38,7 @@ const Cards = () => {
       />
       <Card
         containerRef={containerRef}
-        src="art3.jpg"
+        src="krishna.jpg"
         alt="Example image"
         rotate="-6deg"
         top="20%"
