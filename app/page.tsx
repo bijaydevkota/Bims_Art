@@ -12,7 +12,7 @@ export default function Home() {
       <header className="bg-gray-800 shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
-        <h1 className="text-3xl font-bold text-teal-500">BimsArt</h1>
+        <a className="text-3xl font-bold text-teal-500" href="#">BimsArt</a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:block">
@@ -29,7 +29,7 @@ export default function Home() {
             </li>
             <li>
               <a href="#gallery" className="text-white hover:text-teal-400 transition duration-300">
-                Arts
+                Gallery
               </a>
             </li>
             <li>
@@ -132,15 +132,9 @@ export default function Home() {
               href="#gallery"
               className="mt-6 inline-block bg-teal-500 text-white py-2 px-6 rounded-full hover:bg-teal-600 transition"
             >
-              View Recent Arts
+              View Gallery
             </a>
-            <a
-              href="https://www.instagram.com/bimsarts_/"
-              target="_"
-              className="mt-6 inline-block bg-transparent border text-white py-2 px-6 rounded-full hover:bg-gray-50 hover:text-black transition"
-            >
-              Get Yours Now
-            </a>
+           
           </div>
         </div>
       </section>
@@ -162,7 +156,7 @@ export default function Home() {
       <section id="gallery" className="py-16 bg-gray-900 mt-8">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-6 text-teal-400">
-            My Recent Arts
+            Gallery
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-16">
             {/* Add your own images here */}
@@ -306,7 +300,7 @@ export default function Home() {
                 href="mailto:your-email@gmail.com"
                 className="text-teal-400 hover:underline"
               >
-                saudbimala123@gmail.com
+                bims50064@gmail.com
               </a>
             </p>
             {/* Social Media Links */}
@@ -331,7 +325,8 @@ export default function Home() {
           </div>
           <div className="mt-6 text-gray-500 text-sm">
             &copy; 2025 BimsArt. All rights reserved.
-          </div>
+          </div> 
+          <p className="mt-4">Designed & Developed By <a href="https://www.devkotabijay.com.np/" target="_blank">Bijay Devkota</a></p>
         </div>
       </footer>
     </div>
