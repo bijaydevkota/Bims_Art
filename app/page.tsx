@@ -78,14 +78,19 @@ export default function Home() {
                 </a>
               </li>
               <li>
+                <a href="#gallery" className="text-white hover:text-teal-400 transition duration-300">
+                  Gallery
+                </a>
+              <li>
                 <a href="#about" className="text-white hover:text-teal-400 transition duration-300">
                   About
                 </a>
               </li>
               <li>
-                <a href="#gallery" className="text-white hover:text-teal-400 transition duration-300">
-                  Arts
+                <a href="#works" className="text-white hover:text-teal-400 transition duration-300">
+                  Works
                 </a>
+              </li> 
               </li>
               <li>
                 <a href="#contact" className="text-white hover:text-teal-400 transition duration-300">
@@ -149,7 +154,7 @@ export default function Home() {
 
     
       {/* Gallery Section */}
-      <section id="gallery" className="py-16 bg-gray-900 mt-8">
+      <section id="gallery" className="py-16 bg-gray-900">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-6 text-teal-400">
             Gallery
@@ -312,6 +317,7 @@ export default function Home() {
               <span className="font-bold text-white">Email:</span>{" "}
               <a
                 href="mailto:your-email@gmail.com"
+                target="_blank"
                 className="text-teal-400 hover:underline"
               >
                 bims50064@gmail.com
