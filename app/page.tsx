@@ -164,12 +164,12 @@ export default function Home() {
             {[
               { path: "/art1.jpg", customized: true },
               { path: "/art2.jpg", forSale: true },
-              { path: "/art3.jpg", soldOut: true },
+              { path: "/krishna.jpg", soldOut: true },
               { path: "/art4.jpg", forSale: true },
               { path: "/art4.jpg", forSale: true },
-              { path: "/art3.jpg", soldOut: true },
+              { path: "/krishna.jpg", soldOut: true },
               { path: "/art2.jpg", forSale: true },
-              { path: "/art3.jpg", soldOut: true },
+              { path: "/krishna.jpg", soldOut: true },
             ].map((image, index) => (
               <div
                 key={index}
