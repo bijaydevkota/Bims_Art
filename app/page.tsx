@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { Menu } from "lucide-react"
+import { Menu, X } from "lucide-react"
+
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,7 +13,9 @@ export default function Home() {
       <header className="bg-gray-800 shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
-        <a className="text-3xl font-bold text-teal-500" href="#">BimsArt</a>
+        <a className="text-3xl font-bold text-teal-500" href="#">
+          BimsArt
+        </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:block">
@@ -56,9 +59,8 @@ export default function Home() {
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
-          <Menu className="w-6 h-6" />
+          {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
-
 
         {/* Mobile Navigation */}
         {menuOpen && (
