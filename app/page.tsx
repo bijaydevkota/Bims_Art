@@ -292,12 +292,13 @@ export default function Home() {
               placeholder="Your Message"
               className="w-full p-3 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-teal-500"
             ></textarea>
-            <button
+            <a
+              href="https://www.instagram.com/bimsarts_/"
               type="submit"
               className="w-full bg-teal-500 text-white py-3 rounded-md hover:bg-teal-600 transition"
             >
               Send Message
-            </button>
+            </a>
           </form>
         </div>
       </section>
@@ -309,7 +310,7 @@ export default function Home() {
             Connect with Me
           </h3>
           <p className="text-gray-400 mb-6">
-            Feel free to reach out via email or follow me on social media.
+            Feel free to reach out via email or follow me on Instagram.
           </p>
           <div className="space-y-3">
             {/* Email */}
