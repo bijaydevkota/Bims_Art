@@ -160,16 +160,16 @@ export default function Home() {
             Gallery
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-16">
-            {/* Add your own images here */}
+            
             {[
-              { path: "/art1.jpg", customized: true },
+              { path: "/art6.jpg", customized: true },
+              { path: "/art9.jpg", forSale: true },
+              { path: "/art11.jpg", customized: true},
+              { path: "/art7.jpg", forSale: true},
+              { path: "/art5.jpg", soldOut: true },
+              { path: "/art3.jpg", customized: true },
+              { path: "/art12.jpg", forSale: true },
               { path: "/art2.jpg", forSale: true },
-              { path: "/krishna.jpg", soldOut: true },
-              { path: "/art4.jpg", forSale: true },
-              { path: "/art4.jpg", forSale: true },
-              { path: "/krishna.jpg", soldOut: true },
-              { path: "/art2.jpg", forSale: true },
-              { path: "/krishna.jpg", soldOut: true },
             ].map((image, index) => (
               <div
                 key={index}
@@ -346,7 +346,7 @@ export default function Home() {
           <div className="mt-6 text-gray-500 text-sm">
             &copy; 2025 BimsArt. All rights reserved.
           </div> 
-          <p className="mt-4">Designed & Developed By <a href="https://www.devkotabijay.com.np/" target="_blank">Bijay Devkota</a></p>
+          <p className="mt-4">Designed & Developed By <a href="https://www.devkotabijay.com.np/" target="_blank">|----------|</a></p>
         </div>
       </footer>
     </div>

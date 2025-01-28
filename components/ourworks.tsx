@@ -6,7 +6,7 @@ export const DragCards = () => {
   return (
     <section id="works" className="relative grid min-h-screen w-full place-content-center overflow-hidden bg-gray-950 mt-32">
       <h2 className="relative z-0 text-[20vw] font-black text-neutral-800 md:text-[200px]">
-        My Works<span className="text-indigo-500">.</span>
+        My Works 
       </h2>
       <Cards />
     </section>
@@ -20,7 +20,7 @@ const Cards = () => {
     <div className="absolute inset-0 z-10" ref={containerRef}>
       <Card
         containerRef={containerRef}
-        src="./art1.jpg"
+        src="./art12.jpg"
         alt="Example image"
         rotate="6deg"
         top="20%"
@@ -29,7 +29,7 @@ const Cards = () => {
       />
       <Card
         containerRef={containerRef}
-        src="./art2.jpg"
+        src="./art1.jpg"
         alt="Example image"
         rotate="12deg"
         top="45%"
@@ -38,7 +38,7 @@ const Cards = () => {
       />
       <Card
         containerRef={containerRef}
-        src="krishna.jpg"
+        src="art5.jpg"
         alt="Example image"
         rotate="-6deg"
         top="20%"
@@ -47,7 +47,7 @@ const Cards = () => {
       />
       <Card
         containerRef={containerRef}
-        src="art4.jpg"
+        src="art10.jpg"
         alt="Example image"
         rotate="8deg"
         top="50%"
@@ -56,7 +56,7 @@ const Cards = () => {
       />
       <Card
         containerRef={containerRef}
-        src="art5.jpg"
+        src="art2.jpg"
         alt="Example image"
         rotate="18deg"
         top="20%"
@@ -65,13 +65,23 @@ const Cards = () => {
       />
       <Card
         containerRef={containerRef}
-        src="art1.jpg"
+        src="art8.jpg"
         alt="Example image"
         rotate="-3deg"
         top="35%"
         left="55%"
         className="w-24 md:w-48"
       />
+      <Card
+        containerRef={containerRef}
+        src="art4.jpg"
+        alt="Example image"
+        rotate="-3deg"
+        top="35%"
+        left="55%"
+        className="w-24 md:w-48"
+      />
+      
     </div>
   );
 };
