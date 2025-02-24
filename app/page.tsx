@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { Menu, X } from "lucide-react"
+import { Menu, X } from "lucide-react";
 import { DragCards } from "@/components/ourworks";
 
 
@@ -275,33 +275,43 @@ export default function Home() {
 
       {/* Contact Section */}
       <section id="contact" className="py-16 bg-gray-800 mt-8">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-6 text-teal-400">Contact Me</h2>
-          <form className="max-w-lg mx-auto space-y-4">
-            <input
-              type="text"
-              placeholder="Your Name"
-              className="w-full p-3 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-teal-500"
-            />
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="w-full p-3 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-teal-500"
-            />
-            <textarea
-              placeholder="Your Message"
-              className="w-full p-3 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-teal-500"
-            ></textarea>
-            <a
-              href="https://www.instagram.com/bimsarts_/"
-              type="submit"
-              className="w-full bg-teal-500 text-white py-3 rounded-md hover:bg-teal-600 transition"
-            >
-              Send Message
-            </a>
-          </form>
-        </div>
-      </section>
+  <div className="container mx-auto px-6 text-center">
+    <h2 className="text-4xl font-bold mb-6 text-teal-400">Contact Me</h2>
+    <form
+      className="max-w-lg mx-auto space-y-4"
+      onSubmit={(e) => {
+        e.preventDefault();
+        // Handle form submission here
+        alert("Message sent successfully!");
+      }}
+    >
+      <input
+        type="text"
+        placeholder="Your Name"
+        className="w-full p-3 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-teal-500"
+        required
+      />
+      <input
+        type="email"
+        placeholder="Your Email"
+        className="w-full p-3 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-teal-500"
+        required
+      />
+      <textarea
+        placeholder="Your Message"
+        className="w-full p-3 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-teal-500"
+        required
+      ></textarea>
+      <button
+        type="submit"
+        className="w-full bg-teal-500 text-white py-3 rounded-md hover:bg-teal-600 transition"
+      >
+        Send Message
+      </button>
+    </form>
+  </div>
+</section>
+
 
       {/* Footer */}
       <footer className="bg-gray-900 py-8 mt-8">
